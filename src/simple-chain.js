@@ -11,6 +11,7 @@ const chainMaker = {
   },
   removeLink(position) {
     if (!Number.isInteger(position) || position < 1 || position > this.cep.length - 1) {
+      this.cep = [];
       throw new Error();
     } else {
       this.cep.splice(position - 1, 1);
